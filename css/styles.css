@@ -1,0 +1,246 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+:root {
+    --bg-color-header: #2A2D34;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'JetBrains Mono', monospace;
+    color: #FCFCFC;
+    background-color: #643F3F;
+}
+
+h1,
+h2,
+h3 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+a {
+    color: #81848B;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+main {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+article {
+    background-color: #FCFCFC;
+    color: #2A2D34;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2.5rem;
+}
+
+abbr {
+    text-decoration: underline !important;
+}
+
+
+/*** HEADER START ***/
+
+.header {
+    background-color: var(--bg-color-header);
+    width: 100vw;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.heading {
+    padding-top: 5rem;
+}
+
+.heading-name {
+    font-size: 1.8em;
+    font-weight: 300;
+    letter-spacing: .25em;
+    margin-bottom: -5px;
+}
+
+.heading-profession {
+    margin-top: 5px;
+    font-weight: lighter;
+    letter-spacing: 1em;
+    font-size: .6em;
+    text-transform: uppercase;
+}
+
+.navbar {
+    margin-top: 45px;
+    padding-bottom: 20px;
+}
+
+.nav-link {
+    display: inline-block;
+    font-size: .7em;
+    font-weight: lighter;
+    margin-right: 5rem;
+}
+
+.nav-link:nth-of-type(4) {
+    margin-right: 0px;
+}
+
+.nav-link a:hover {
+    color: #FCFCFC;
+    transition: .5s ease-in-out;
+}
+
+.hire-me {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 3rem;
+}
+
+.hire-me-btn {
+    padding: 2rem;
+    font-size: 3rem;
+    border: 3px solid black;
+    border-radius: 20px;
+    opacity: .3;
+}
+
+.hire-me-btn:hover {
+    opacity: 1;
+    font-weight: bold;
+}
+
+
+/*** HEADER END ***/
+
+.main {
+    font-size: 2rem;
+}
+
+.main-content {
+    background-color: #FCFCFC;
+    margin: 0 auto;
+    margin-top: 7rem;
+    max-width: 1200px;
+    border-radius: 5px;
+}
+
+.article-heading {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    position: relative;
+    top: 0;
+    left: -15px;
+    z-index: 0;
+}
+
+.article-heading::after {
+    background-color: rgb(250, 110, 59);
+    content: "";
+    position: absolute;
+    width: 20%;
+    height: 60%;
+    left: 0;
+    top: 25%;
+    z-index: -1;
+    transform: rotate(-1deg);
+}
+
+.header-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.experience-heading {
+    display: inline-block;
+    font-size: 1em;
+    text-decoration: underline;
+}
+
+.experience-subheading {
+    font-size: .8em;
+    display: inline-block;
+    font-weight: lighter;
+}
+
+.profession-description {
+    max-width: 55ch;
+    font-size: 1em;
+    font-weight: 200;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    padding-left: 3rem;
+    line-height: 1.2em;
+}
+
+.skills-list {
+    padding: 3rem;
+}
+
+.skills-list li {
+    margin-bottom: 1rem;
+}
+
+footer {
+    color: #FCFCFC;
+    font-size: 3rem;
+    text-align: center;
+}
+
+footer a:hover {
+    color: #FCFCFC;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        font-size: 2.3rem;
+    }
+    .nav-link {
+        margin: .5rem;
+    }
+    .profession-description {
+        padding: 0;
+    }
+    .hire-me {
+        margin: 1rem;
+    }
+    .hire-me-btn {
+        font-size: 2rem;
+        margin: 1rem;
+        padding: .5rem;
+    }
+    .header-section {
+        display: block;
+    }
+}
+
+@media (min-width: 992px) {}
+
+@media print {
+    nav {
+        display: none;
+    }
+    .hire-me {
+        display: none;
+    }
+    .heading-name {
+        color: black;
+    }
+    .heading-profession {
+        color: black;
+    }
+}
