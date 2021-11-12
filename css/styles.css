@@ -61,6 +61,7 @@ abbr {
     width: 100vw;
     font-size: 3rem;
     text-align: center;
+    box-shadow: 0px -5px 20px black;
 }
 
 .heading {
