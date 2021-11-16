@@ -58,6 +58,7 @@ abbr {
 /*** HEADER START ***/
 
 .header {
+    background: linear-gradient(to right, white -80%, var(--bg-color-header) 30%, var(--bg-color-header) 65%, white 200%);
     background-color: var(--bg-color-header);
     width: 100vw;
     font-size: 3rem;
