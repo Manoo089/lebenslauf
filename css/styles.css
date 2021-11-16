@@ -8,6 +8,7 @@
 
 :root {
     --bg-color-header: #2A2D34;
+    --bg-color-body: #643F3F;
 }
 
 html {
@@ -17,7 +18,7 @@ html {
 body {
     font-family: 'JetBrains Mono', monospace;
     color: #FCFCFC;
-    background-color: #643F3F;
+    background-color: var(--bg-color-body);
 }
 
 h1,
@@ -88,8 +89,12 @@ abbr {
     padding-bottom: 20px;
 }
 
+.navbar-links {
+    display: flex;
+    justify-content: center;
+}
+
 .nav-link {
-    display: inline-block;
     font-size: .7em;
     font-weight: lighter;
     margin-right: 5rem;
@@ -149,7 +154,7 @@ abbr {
 }
 
 .article-heading::after {
-    background-color: rgb(250, 110, 59);
+    background-color: rgb(238, 190, 181);
     content: "";
     position: absolute;
     width: 20%;
@@ -209,6 +214,9 @@ footer a:hover {
 @media (max-width: 768px) {
     .navbar {
         font-size: 2.3rem;
+    }
+    .navbar-links {
+        flex-direction: column;
     }
     .nav-link {
         margin: .5rem;
