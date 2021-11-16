@@ -58,7 +58,7 @@ abbr {
 /*** HEADER START ***/
 
 .header {
-    background: linear-gradient(to right, white -80%, var(--bg-color-header) 30%, var(--bg-color-header) 65%, white 200%);
+    background: linear-gradient( to right, white -80%, var(--bg-color-header) 30%, var(--bg-color-header) 65%, white 200%);
     background-color: var(--bg-color-header);
     width: 100vw;
     font-size: 3rem;
@@ -203,9 +203,12 @@ abbr {
 }
 
 footer {
+    background-color: var(--bg-color-header);
     color: #FCFCFC;
     font-size: 3rem;
     text-align: center;
+    padding: 1rem 1rem;
+    box-shadow: 0px -5px 20px black;
 }
 
 footer a:hover {
