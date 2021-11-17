@@ -9,6 +9,15 @@
 :root {
     --bg-color-header: #2A2D34;
     --bg-color-body: #643F3F;
+    --text-color: #FCFCFC;
+    --link-color: #81848B;
+    --link-color-hover: #FCFCFC;
+    --main-bg-color: #FCFCFC;
+    --article-color: #2A2D34;
+    --article-bg-color: #FCFCFC;
+    --article-headings: rgb(238, 190, 181);
+    --footer-color: #FCFCFC;
+    --box-shadow: 0px -5px 20px black;
 }
 
 html {
@@ -17,7 +26,7 @@ html {
 
 body {
     font-family: 'JetBrains Mono', monospace;
-    color: #FCFCFC;
+    color: var(--text-color);
     background-color: var(--bg-color-body);
 }
 
@@ -29,7 +38,7 @@ h3 {
 }
 
 a {
-    color: #81848B;
+    color: var(--link-color);
     text-decoration: none;
 }
 
@@ -43,8 +52,8 @@ main {
 }
 
 article {
-    background-color: #FCFCFC;
-    color: #2A2D34;
+    background-color: var(--article-bg-color);
+    color: var(--article-color);
     max-width: 800px;
     margin: 0 auto;
     padding: 2.5rem;
@@ -63,7 +72,7 @@ abbr {
     width: 100vw;
     font-size: 3rem;
     text-align: center;
-    box-shadow: 0px -5px 20px black;
+    box-shadow: var(--box-shadow);
 }
 
 .heading {
@@ -106,7 +115,7 @@ abbr {
 }
 
 .nav-link a:hover {
-    color: #FCFCFC;
+    color: var(--link-color-hover);
     transition: .5s ease-in-out;
 }
 
@@ -138,7 +147,7 @@ abbr {
 }
 
 .main-content {
-    background-color: #FCFCFC;
+    background-color: var(--main-bg-color);
     margin: 0 auto;
     margin-top: 7rem;
     max-width: 1200px;
@@ -155,7 +164,7 @@ abbr {
 }
 
 .article-heading::after {
-    background-color: rgb(238, 190, 181);
+    background-color: var(--article-headings);
     content: "";
     position: absolute;
     width: 20%;
@@ -204,15 +213,15 @@ abbr {
 
 footer {
     background-color: var(--bg-color-header);
-    color: #FCFCFC;
+    color: var(--footer-color);
     font-size: 3rem;
     text-align: center;
     padding: 1rem 1rem;
-    box-shadow: 0px -5px 20px black;
+    box-shadow: var(--box-shadow);
 }
 
 footer a:hover {
-    color: #FCFCFC;
+    color: var(--footer-color);
 }
 
 @media (max-width: 768px) {
@@ -255,5 +264,11 @@ footer a:hover {
     }
     .heading-profession {
         color: black;
+    }
+}
+
+@media screen and (prefers-color-scheme: light) {
+    body {
+        --bg-color-body: rgb(0, 0, 0, .3);
     }
 }
