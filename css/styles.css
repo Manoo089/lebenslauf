@@ -104,10 +104,12 @@ abbr {
     justify-content: center;
 }
 
-.nav-link {
+.nav-link a {
+    color: var(--link-color);
     font-size: .7em;
     font-weight: lighter;
     margin-right: 5rem;
+    transition: color .3s ease-in-out;
 }
 
 .nav-link:nth-of-type(4) {
@@ -116,7 +118,10 @@ abbr {
 
 .nav-link a:hover {
     color: var(--link-color-hover);
-    transition: .5s ease-in-out;
+}
+
+.nav-link a:focus {
+    color: var(--link-color-hover);
 }
 
 .hire-me {
